@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jason - 자기소개</title>
+    <title>김재윤 - 자기소개</title>
     <style>
         * {
             margin: 0;
@@ -35,6 +35,10 @@
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        nav li {
+            list-style: none;
         }
 
         nav a {
@@ -119,36 +123,6 @@
 
         .about-info strong {
             color: #667eea;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .skill-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-card h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-card p {
-            font-size: 0.9rem;
-            opacity: 0.9;
         }
 
         /* Projects Section */
@@ -253,10 +227,6 @@
                 font-size: 1.5rem;
             }
 
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -272,7 +242,6 @@
     <nav>
         <ul>
             <li><a href="#about">소개</a></li>
-            <li><a href="#skills">기술</a></li>
             <li><a href="#projects">프로젝트</a></li>
             <li><a href="#contact">연락처</a></li>
         </ul>
@@ -281,7 +250,7 @@
     <!-- Hero Section -->
     <div class="hero">
         <h1>김재윤</h1>
-        <p>웹 개발자 & 기술 enthusiast</p>
+        <p>축구, 야구, 게임을 좋아하는 청소년 개발자</p>
     </div>
 
     <div class="container">
@@ -290,38 +259,15 @@
             <h2>소개</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>안녕하세요! 저는 Jason이며, 웹 개발에 열정을 가진 개발자입니다.</p>
-                    <p>사용자 경험을 중시하고 깔끔하고 효율적인 코드를 작성하는 것을 목표로 합니다.</p>
-                    <p>새로운 기술을 배우고 도전하는 것을 즐기며, 팀 프로젝트에서 적극적으로 협력합니다.</p>
+                    <p>안녕하세요! 저는 김재윤이라고 합니다. 축구와 야구, 그리고 게임을 정말 좋아합니다.</p>
+                    <p>현재 어떤 진로를 선택할지 탐색 중이지만, 재미있어 보이는 것들을 배우고 도전하는 것을 즐깁니다.</p>
+                    <p>새로운 기술을 배우고 프로젝트를 만드는 것이 흥미롭고, 좋아하는 분야(스포츠, 게임)와 기술을 결합한 프로젝트를 만들어보고 싶습니다.</p>
                 </div>
                 <div class="about-info">
                     <p><strong>이름:</strong> 김재윤</p>
                     <p><strong>나이:</strong> 15세</p>
-                    <p><strong>위치:</strong> 인천송도</p>
-                    <p><strong>이메일:</strong> jayoonwas@gmail.com</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>기술 스택</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, React</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Backend</h3>
-                    <p>Node.js, Python, Express</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Database</h3>
-                    <p>MySQL, MongoDB, PostgreSQL</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Tools</h3>
-                    <p>Git, VS Code, Docker</p>
+                    <p><strong>관심사:</strong> 축구, 야구, 게임</p>
+                    <p><strong>희망 진로:</strong> 탐색 중</p>
                 </div>
             </div>
         </section>
@@ -331,30 +277,12 @@
             <h2>프로젝트</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>프로젝트 1</h3>
-                    <p>프로젝트에 대한 간단한 설명을 작성하세요. 어떤 기술을 사용했고 어떤 문제를 해결했는지 설명합니다.</p>
+                    <h3>축구 승률 예측기</h3>
+                    <p>축구 경기의 과거 결과 데이터를 분석하여 다음 경기의 승률을 예측하는 프로젝트입니다. 좋아하는 축구와 기술을 결합한 프로젝트로, 데이터 분석과 머신러닝에 관심이 있습니다.</p>
                     <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>프로젝트 2</h3>
-                    <p>프로젝트에 대한 간단한 설명을 작성하세요. 어떤 기술을 사용했고 어떤 문제를 해결했는지 설명합니다.</p>
-                    <div class="project-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">API</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>프로젝트 3</h3>
-                    <p>프로젝트에 대한 간단한 설명을 작성하세요. 어떤 기술을 사용했고 어떤 문제를 해결했는지 설명합니다.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">MySQL</span>
+                        <span class="tag">축구</span>
+                        <span class="tag">데이터 분석</span>
+                        <span class="tag">예측</span>
                     </div>
                 </div>
             </div>
@@ -363,14 +291,12 @@
         <!-- Contact Section -->
         <section id="contact">
             <h2>연락처</h2>
-            <p style="text-align: center; margin-bottom: 1.5rem;">아래 링크를 통해 저와 연락할 수 있습니다.</p>
+            <p style="text-align: center; margin-bottom: 1.5rem;">아래를 통해 저와 연락할 수 있습니다.</p>
             <div class="contact-links">
                 <a href="mailto:jayoonwas@gmail.com" class="contact-link">📧 Email</a>
-                <a href="https://github.com" class="contact-link">🐙 GitHub</a>
-                <a href="https://linkedin.com" class="contact-link">💼 LinkedIn</a>
-                <a href="https://twitter.com" class="contact-link">𝕏 Twitter</a>
             </div>
         </section>
+
     </div>
 
     <!-- Footer -->
