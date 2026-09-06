@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나만의 BBS</title>
+  <style>
+    body { font-family: sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; color: #1f2937; }
+    h1 { margin-bottom: 8px; font-size: 32px; }
+    nav { margin-bottom: 16px; font-size: 14px; }
+    nav a, nav span { margin-right: 12px; }
+    button, a.nav-btn, a.new-link { padding: 10px 18px; background: #1d4ed8; color: white; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; display: inline-block; }
+    button:hover, a.nav-btn:hover, a.new-link:hover { background: #1e40af; }
+    a.new-link { margin-bottom: 20px; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 12px 0; border-bottom: 1px solid #e5e7eb; }
+    li a { text-decoration: none; color: #1d4ed8; font-weight: 600; font-size: 17px; }
+    .meta { color: #94a3b8; font-size: 14px; margin-left: 8px; }
+  </style>
+</head>
+<body>
+  <nav>
+    {% if session.get("username") %}
+      <span>{{ session.username }}님</span>
+      <form method="GET" action="/dashboard" style="display:inline">
+        <button type="submit">대시보드</button>
+      </form>
+      <form method="POST" action="/logout" style="display:inline">
+        <button type="submit">로그아웃</button>
+      </form>
+    {% else %}
+      <a href="/login" class="nav-btn">로그인</a>
+      <a href="/signup" class="nav-btn">회원가입</a>
+      <a href="/dashboard" class="nav-btn">대시보드</a>
+    {% endif %}
+  </nav>
+
+  <h1>게시판</h1>
+  <a class="new-link" href="/new">글쓰기</a>
+  <ul>
+    {% for post in posts %}
+    <li>
+      <a href="/posts/{{ post.id }}">{{ post.title }}</a>
+      <span class="meta">{{ post.username or "익명" }} · {{ post.created_at }}</span>
+    </li>
+    {% else %}
+    <li>아직 글이 없습니다. 첫 글을 써 보세요.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
