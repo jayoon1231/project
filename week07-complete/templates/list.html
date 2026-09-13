@@ -35,6 +35,13 @@
   </nav>
 
   <h1>게시판</h1>
+
+  <form method="GET" action="/" class="search">
+    <input type="text" name="q" value="{{ q or '' }}" placeholder="제목·내용 검색">
+    <button type="submit">검색</button>
+    {% if q %}<a href="/">전체보기</a>{% endif %}
+  </form>
+
   <a class="new-link" href="/new">글쓰기</a>
   <ul>
     {% for post in posts %}
